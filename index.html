@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAJA OFFICIAL | Premier Cricket Analytics & Match Insights</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3058231074542660');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3058231074542660&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Deep Crimson-Burgundy & Warm Charcoal Stadium VIP Atmosphere */
+    body {
+      background-color: #120608;
+      background-image:
+        radial-gradient(ellipse at 50% 0%, rgba(185, 28, 28, 0.34) 0%, transparent 58%),
+        radial-gradient(circle at 12% 85%, rgba(217, 119, 6, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 88% 80%, rgba(153, 27, 27, 0.22) 0%, transparent 50%),
+        linear-gradient(180deg, #1a080b 0%, #0d0506 100%);
+      color: #fdf8f6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Subtle Diagonal Stadium Floodlight Beams */
+    .floodlight-beams {
+      background-image:
+        linear-gradient(125deg, rgba(245, 158, 11, 0.05) 0%, transparent 38%),
+        linear-gradient(235deg, rgba(220, 38, 38, 0.07) 0%, transparent 42%);
+    }
+
+    /* Architectural VIP Pass Card */
+    .vip-pass-card {
+      background: linear-gradient(175deg, #1f0c0f 0%, #140709 65%, #0f0506 100%);
+      border: 1.5px solid rgba(217, 119, 6, 0.42);
+      box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.88),
+        0 0 40px rgba(185, 28, 28, 0.2),
+        inset 0 1px 0 rgba(251, 191, 36, 0.22);
+    }
+
+    /* Full-Bleed Crimson & Burnished Copper Hero Banner */
+    .hero-stadium-banner {
+      background:
+        radial-gradient(circle at 50% 25%, rgba(245, 158, 11, 0.26) 0%, transparent 65%),
+        linear-gradient(135deg, #450a0a 0%, #7f1d1d 48%, #2a080b 100%);
+      border-bottom: 1.5px solid rgba(217, 119, 6, 0.45);
+    }
+
+    /* Squircle (Square-Rounded) 3D Bronze Frame */
+    .squircle-frame {
+      background: linear-gradient(145deg, #f59e0b 0%, #b45309 45%, #fbbf24 100%);
+      padding: 3.5px;
+      border-radius: 1.65rem;
+      box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.75),
+        0 0 24px rgba(245, 158, 11, 0.4);
+    }
+
+    .squircle-inner {
+      border-radius: 1.45rem;
+      background-color: #0e0a09;
+    }
+
+    /* Metallic Burnished Copper & Amber Gradient Text */
+    .bronze-title {
+      background: linear-gradient(180deg, #fef3c7 0%, #f59e0b 52%, #b45309 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Split Stats Ribbon */
+    .stats-ribbon {
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid rgba(217, 119, 6, 0.25);
+      border-bottom: 1px solid rgba(217, 119, 6, 0.25);
+    }
+
+    /* Flip-Style Digital Countdown Tile */
+    .flip-digit {
+      background: linear-gradient(180deg, #2b1115 0%, #19090b 49%, #230d10 51%, #130608 100%);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      position: relative;
+    }
+
+    .flip-digit::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.75);
+    }
+
+    /* Stacked Architectural Feature Card with Copper Left Border */
+    .copper-feature-card {
+      background: linear-gradient(90deg, rgba(217, 119, 6, 0.11) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-left: 4px solid #d97706;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .copper-feature-card:hover {
+      transform: translateX(3px);
+      border-left-color: #fbbf24;
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.17) 0%, rgba(255, 255, 255, 0.04) 100%);
+    }
+
+    /* High-Contrast Metallic Bronze-to-Amber Telegram CTA Button */
+    .bronze-cta-btn {
+      background: linear-gradient(135deg, #b45309 0%, #d97706 45%, #f59e0b 100%);
+      border: 1px solid #fde68a;
+      color: #160805;
+      box-shadow:
+        0 12px 30px rgba(217, 119, 6, 0.48),
+        inset 0 1px 1px rgba(255, 255, 255, 0.65);
+      animation: bronzePulse 2s infinite;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .bronze-cta-btn:hover {
+      transform: translateY(-2px) scale(1.015);
+      box-shadow:
+        0 16px 36px rgba(245, 158, 11, 0.65),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+
+    .bronze-cta-btn:active {
+      transform: scale(0.98);
+    }
+
+    @keyframes bronzePulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6), 0 12px 30px rgba(217, 119, 6, 0.48);
+      }
+      70% {
+        box-shadow: 0 0 0 13px rgba(245, 158, 11, 0), 0 12px 30px rgba(217, 119, 6, 0.48);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0), 0 12px 30px rgba(217, 119, 6, 0.48);
+      }
+    }
+
+    /* Light Glint Across CTA */
+    .bronze-cta-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80%;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.55) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-24deg);
+      animation: copperGlint 3s infinite;
+    }
+
+    @keyframes copperGlint {
+      0% { left: -80%; }
+      48% { left: 140%; }
+      100% { left: 140%; }
+    }
+  </style>
+</head>
+<body class="floodlight-beams flex flex-col items-center justify-between px-3.5 py-4 sm:py-6">
+
+  <!-- Top Attribution Pill -->
+  <header class="w-full max-w-md flex justify-center mb-3.5">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1e0b0e]/95 border border-amber-500/35 shadow-lg">
+      <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+      <span class="text-[11px] sm:text-xs font-bold tracking-widest uppercase text-amber-100/85">
+        Ads by <span class="text-amber-400 font-black">ClickForgeAds</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- Main Stadium VIP Pass Card -->
+  <main class="w-full max-w-md vip-pass-card rounded-[2rem] overflow-hidden my-auto">
+
+    <!-- Full-Bleed Crimson & Bronze Hero Header -->
+    <div class="hero-stadium-banner relative px-5 pt-5 pb-14 text-center">
+      <!-- Subtle Stadium Grid Lines -->
+      <div class="flex items-center justify-between text-[10px] font-extrabold uppercase tracking-widest text-amber-200/80">
+        <span class="px-2.5 py-0.5 rounded bg-black/35 border border-amber-400/25">VIP ACCESS PASS</span>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-emerald-950/70 border border-emerald-400/35 text-emerald-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+          LIVE NOW
+        </span>
+      </div>
+    </div>
+
+    <!-- Overlapping Square-Rounded (Squircle) Logo Frame -->
+    <div class="relative -mt-12 flex justify-center px-5">
+      <div class="squircle-frame w-28 h-28 sm:w-32 sm:h-32">
+        <div class="squircle-inner w-full h-full overflow-hidden flex items-center justify-center relative">
+          <!-- Primary Attached 3D Bronze Cricket & Analytics Logo ('raja offi.jpg') -->
+          <img
+            id="rajaLogoImg"
+            src="raja offi.jpg"
+            alt="RAJA OFFICIAL Logo"
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'; document.getElementById('rajaFallbackSvg').classList.remove('hidden');"
+          />
+
+          <!-- High-Detail 3D Bronze Cricket Bat, Ball, Wickets & Growth Chart SVG Fallback -->
+          <svg id="rajaFallbackSvg" class="hidden w-full h-full p-2" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bronzeMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fde68a" />
+                <stop offset="50%" stop-color="#d97706" />
+                <stop offset="100%" stop-color="#78350f" />
+              </linearGradient>
+              <radialGradient id="leatherBall" cx="35%" cy="35%" r="65%">
+                <stop offset="0%" stop-color="#b45309" />
+                <stop offset="65%" stop-color="#7c2d12" />
+                <stop offset="100%" stop-color="#290d06" />
+              </radialGradient>
+            </defs>
+            <rect width="220" height="220" rx="26" fill="#0d0908" />
+
+            <!-- Stadium Floodlight Tower (Left) -->
+            <rect x="44" y="54" width="4" height="62" fill="url(#bronzeMetallic)" />
+            <rect x="35" y="34" width="22" height="22" rx="3" fill="#291509" stroke="url(#bronzeMetallic)" stroke-width="2" />
+            <circle cx="41" cy="40" r="2.2" fill="#fef3c7" />
+            <circle cx="46" cy="40" r="2.2" fill="#fef3c7" />
+            <circle cx="51" cy="40" r="2.2" fill="#fef3c7" />
+            <circle cx="41" cy="45" r="2.2" fill="#fef3c7" />
+            <circle cx="46" cy="45" r="2.2" fill="#fef3c7" />
+            <circle cx="51" cy="45" r="2.2" fill="#fef3c7" />
+            <circle cx="41" cy="50" r="2.2" fill="#fef3c7" />
+            <circle cx="46" cy="50" r="2.2" fill="#fef3c7" />
+            <circle cx="51" cy="50" r="2.2" fill="#fef3c7" />
+
+            <!-- Three Wickets & Bails -->
+            <rect x="76" y="42" width="5" height="74" rx="2" fill="url(#bronzeMetallic)" />
+            <rect x="90" y="42" width="5" height="74" rx="2" fill="url(#bronzeMetallic)" />
+            <rect x="104" y="42" width="5" height="74" rx="2" fill="url(#bronzeMetallic)" />
+            <rect x="74" y="37" width="37" height="4.5" rx="2" fill="url(#bronzeMetallic)" />
+
+            <!-- Analytics Rising Bars & Arrow (Right) -->
+            <rect x="132" y="96" width="10" height="20" rx="1.5" fill="url(#bronzeMetallic)" />
+            <rect x="147" y="84" width="10" height="32" rx="1.5" fill="url(#bronzeMetallic)" />
+            <rect x="162" y="70" width="10" height="46" rx="1.5" fill="url(#bronzeMetallic)" />
+            <rect x="177" y="54" width="10" height="62" rx="1.5" fill="url(#bronzeMetallic)" />
+            <path d="M132 82 Q158 72 183 43" fill="none" stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round" />
+            <polygon points="186,38 175,42 183,50" fill="#fbbf24" />
+
+            <!-- Angled 3D Cricket Bat -->
+            <g transform="translate(112, 82) rotate(32)">
+              <rect x="-4.5" y="-44" width="9" height="28" rx="2.5" fill="#451a03" stroke="#d97706" stroke-width="1.2" />
+              <rect x="-11" y="-16" width="22" height="58" rx="3" fill="url(#bronzeMetallic)" />
+              <line x1="0" y1="-16" x2="0" y2="42" stroke="#fef3c7" stroke-width="1.2" opacity="0.6" />
+            </g>
+
+            <!-- Leather Cricket Ball with Seam -->
+            <circle cx="74" cy="94" r="22" fill="url(#leatherBall)" stroke="#d97706" stroke-width="1.2" />
+            <path d="M58 80 Q74 94 90 108" fill="none" stroke="#fde68a" stroke-width="1.5" stroke-dasharray="3 2" />
+            <path d="M61 77 Q77 91 93 105" fill="none" stroke="#fde68a" stroke-width="1.5" stroke-dasharray="3 2" />
+
+            <!-- Base Line & Brand Title -->
+            <rect x="34" y="118" width="152" height="3.5" rx="1.5" fill="url(#bronzeMetallic)" />
+            <text x="110" y="156" text-anchor="middle" fill="url(#bronzeMetallic)" font-family="Georgia, serif" font-size="28" font-weight="900" letter-spacing="1.5">RAJA</text>
+            <text x="110" y="182" text-anchor="middle" fill="url(#bronzeMetallic)" font-family="Inter, sans-serif" font-size="16" font-weight="800" letter-spacing="3">OFFICIAL</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Channel Title & Verified Badge -->
+    <div class="px-5 pt-3.5 pb-4 text-center">
+      <div class="flex items-center justify-center gap-2 mb-1">
+        <h1 class="text-2xl sm:text-3xl font-black tracking-tight uppercase bronze-title drop-shadow">
+          RAJA OFFICIAL
+        </h1>
+        <!-- Official Verified Crest -->
+        <svg class="w-6 h-6 text-amber-400 shrink-0 drop-shadow" viewBox="0 0 24 24" fill="currentColor" aria-label="Verified Channel">
+          <path d="M12 2L14.8 4.2L18.4 3.8L19.6 7.2L22.6 9.2L21.6 12.7L22.6 16.2L19.6 18.2L18.4 21.6L14.8 21.2L12 23.4L9.2 21.2L5.6 21.6L4.4 18.2L1.4 16.2L2.4 12.7L1.4 9.2L4.4 7.2L5.6 3.8L9.2 4.2L12 2ZM10.4 16.2L17.1 9.5L15.7 8.1L10.4 13.4L8.1 11.1L6.7 12.5L10.4 16.2Z" />
+        </svg>
+      </div>
+      <p class="text-xs sm:text-sm font-medium text-amber-100/75">
+        Data-Driven Cricket Analytics • Pitch &amp; Match Intelligence
+      </p>
+    </div>
+
+    <!-- Horizontal Split Stats Ribbon -->
+    <div class="stats-ribbon grid grid-cols-3 divide-x divide-amber-500/20 py-3 px-2 text-center">
+      <div>
+        <div class="text-sm sm:text-base font-black text-amber-400">96%</div>
+        <div class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wide text-stone-400">Match Insights</div>
+      </div>
+      <div>
+        <div class="text-sm sm:text-base font-black text-white">50K+</div>
+        <div class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wide text-stone-400">Active Members</div>
+      </div>
+      <div>
+        <div class="text-sm sm:text-base font-black text-amber-400">LIVE</div>
+        <div class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wide text-stone-400">Pitch Reports</div>
+      </div>
+    </div>
+
+    <!-- Body Content Container -->
+    <div class="p-5 sm:p-6 space-y-5">
+
+      <!-- Flip-Style 20-Second Digital Countdown & Linear Progress Bar -->
+      <div class="bg-black/45 border border-amber-500/30 rounded-2xl p-4">
+        <div class="flex items-center justify-between mb-3">
+          <span id="timerStatusLabel" class="text-[11px] font-extrabold uppercase tracking-wider text-amber-300">
+            ⏳ Auto-Opening Channel In
+          </span>
+          <span class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30">
+            Free VIP Invite
+          </span>
+        </div>
+
+        <!-- Digital Flip-Style Counter Row -->
+        <div class="flex items-center justify-center gap-2.5 mb-3.5">
+          <div class="flip-digit w-12 h-14 rounded-xl flex items-center justify-center">
+            <span id="flipTens" class="text-3xl font-black text-white tabular-nums">2</span>
+          </div>
+          <div class="flip-digit w-12 h-14 rounded-xl flex items-center justify-center">
+            <span id="flipOnes" class="text-3xl font-black text-amber-400 tabular-nums">0</span>
+          </div>
+          <span id="flipUnitText" class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-stone-400 ml-1">
+            Seconds
+          </span>
+        </div>
+
+        <!-- Sleek Horizontal Linear Progress Bar -->
+        <div class="w-full h-2 bg-stone-900 rounded-full overflow-hidden p-[1px] border border-amber-500/20">
+          <div
+            id="linearProgressBar"
+            class="h-full rounded-full bg-gradient-to-r from-red-600 via-amber-500 to-yellow-300 transition-all duration-1000 ease-linear"
+            style="width: 100%;"
+          ></div>
+        </div>
+      </div>
+
+      <!-- High-Contrast Metallic Bronze-to-Amber Telegram CTA Button -->
+      <a
+        id="joinRajaBtn"
+        href="https://telegram.me/+Q0Gvvtk32zljZjRl"
+        class="bronze-cta-btn relative overflow-hidden w-full py-4 px-5 rounded-2xl flex items-center justify-center gap-3 font-black text-sm sm:text-base tracking-wider uppercase cursor-pointer select-none"
+      >
+        <svg class="w-6 h-6 shrink-0 fill-current" viewBox="0 0 24 24">
+          <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+        </svg>
+        <span>JOIN RAJA OFFICIAL CHANNEL</span>
+      </a>
+
+      <!-- Stacked Architectural Feature Cards with Copper Left Borders -->
+      <div class="space-y-2.5 text-left">
+        <div class="copper-feature-card rounded-r-xl rounded-l-md p-3 flex items-center gap-3">
+          <span class="text-lg shrink-0">📈</span>
+          <div>
+            <h3 class="text-xs sm:text-sm font-extrabold text-amber-100">Pre-Match &amp; Toss Analytics</h3>
+            <p class="text-[11px] text-stone-400">Comprehensive stadium surface reports, dew factor &amp; squad breakdown.</p>
+          </div>
+        </div>
+
+        <div class="copper-feature-card rounded-r-xl rounded-l-md p-3 flex items-center gap-3">
+          <span class="text-lg shrink-0">🏏</span>
+          <div>
+            <h3 class="text-xs sm:text-sm font-extrabold text-amber-100">IPL, T20 Leagues &amp; World Series</h3>
+            <p class="text-[11px] text-stone-400">Ball-by-ball momentum insights and expert cricket community discussions.</p>
+          </div>
+        </div>
+
+        <div class="copper-feature-card rounded-r-xl rounded-l-md p-3 flex items-center gap-3">
+          <span class="text-lg shrink-0">⚡</span>
+          <div>
+            <h3 class="text-xs sm:text-sm font-extrabold text-amber-100">100% Free Telegram Access</h3>
+            <p class="text-[11px] text-stone-400">Instant match alerts and daily statistical breakdowns with zero membership cost.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Editorial Footer Disclaimer -->
+  <footer class="w-full max-w-md text-center mt-4 px-2">
+    <p class="text-[10px] sm:text-[11px] leading-relaxed text-stone-500">
+      <strong>Disclaimer:</strong> RAJA OFFICIAL provides cricket match statistics, pitch reports, and sports commentary solely for informational and entertainment purposes. Intended for audiences aged 18+ only.
+    </p>
+  </footer>
+
+  <!-- 20-Second Countdown & Auto-Redirect Script -->
+  <script>
+    (function () {
+      const CHANNEL_REDIRECT_URL = "https://telegram.me/+Q0Gvvtk32zljZjRl";
+      const TOTAL_SECONDS = 20;
+      let remaining = TOTAL_SECONDS;
+
+      const tensEl = document.getElementById("flipTens");
+      const onesEl = document.getElementById("flipOnes");
+      const unitEl = document.getElementById("flipUnitText");
+      const statusLabelEl = document.getElementById("timerStatusLabel");
+      const progressBarEl = document.getElementById("linearProgressBar");
+
+      const countdownInterval = setInterval(() => {
+        remaining -= 1;
+
+        if (remaining > 0) {
+          const padded = remaining < 10 ? "0" + remaining : String(remaining);
+          tensEl.textContent = padded[0];
+          onesEl.textContent = padded[1];
+          progressBarEl.style.width = ((remaining / TOTAL_SECONDS) * 100) + "%";
+        } else {
+          clearInterval(countdownInterval);
+          tensEl.textContent = "0";
+          onesEl.textContent = "0";
+          progressBarEl.style.width = "0%";
+          statusLabelEl.textContent = "🚀 Opening RAJA OFFICIAL Telegram...";
+          statusLabelEl.classList.remove("text-amber-300");
+          statusLabelEl.classList.add("text-emerald-400");
+          unitEl.textContent = "";
+
+          // Automatically open the Telegram channel when timer hits 00
+          window.location.href = CHANNEL_REDIRECT_URL;
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
